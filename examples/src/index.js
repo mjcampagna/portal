@@ -1,9 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Component from '../../src'
+import Portal from '../../src'
 
 const App = () => (
-  <Component />
+  <Portal><p>In a portal ...</p></Portal>
 )
 
 render(<App />, document.getElementById('root'))

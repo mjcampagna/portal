@@ -1,8 +1,13 @@
 import React from 'react'
-import './style.css'
+import { createPortal } from 'react-dom'
+import usePortal from './usePortal'
 
-const Component = () => (
-  <h1>I am Component.</h1>
-)
+const Portal = ({ id = 'portal', children }) => {
+  const target = usePortal(id)
+  return createPortal(
+    children,
+    target,
+  )
+}
 
-export default Component
+export default Portal
